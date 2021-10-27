@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.Appname {
+    font-family: "Montserrat", Roboto, sans-serif;
+    color: #A35709;
+}
+
+.Logo {
+    height: 100px;
+    width: 100px;
+}
+
+.Button {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    border-radius: 33%;
+    border: 2px solid black;
+}

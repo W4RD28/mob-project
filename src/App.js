@@ -1,7 +1,7 @@
-import Login from './Login';
-import SignUp from './SignUp';
-import Dashboard from './Dashboard';
-import Workspaces from './Workspaces';
+import Login from './Components/Login';
+import SignUp from './Components/SignUp';
+import Dashboard from './Components/Dashboard';
+import Workspaces from './Components/Workspaces';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route path="/signup">
             <SignUp />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Dashboard />
           </Route>
         </Switch>
