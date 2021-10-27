@@ -1,45 +1,25 @@
 import Login from './Login';
 import SignUp from './SignUp';
 import Dashboard from './Dashboard';
-import Home from './Home';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import './App.css';
+import Workspaces from './Workspaces';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="login">Login</Link>
-              </li>
-              <li>
-                <Link to="signup">Sign up</Link>
-              </li>
-              <li>
-                <Link to="dashboard">Dashboard</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
         <Switch>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/workspaces">
+            <Workspaces />
           </Route>
           <Route path="/login">
             <Login />
           </Route>
           <Route path="/signup">
-            <SignUp/ >
+            <SignUp />
           </Route>
           <Route path="/">
-            <Home />
+            <Dashboard />
           </Route>
         </Switch>
       </Router>

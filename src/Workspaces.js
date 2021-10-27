@@ -1,6 +1,6 @@
 const Home = () => {
     return ( 
-        <header>Ini Home</header>
+        <header>Ini Workspaces</header>
      );
 }
  
