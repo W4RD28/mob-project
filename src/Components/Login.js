@@ -1,6 +1,8 @@
+import '../Styles/Login.css'
+
 const Login = () => {
     return ( 
-        <header>Ini Login</header>
+        <header className="teksmerah">Ini Login</header>
      );
 }
  
