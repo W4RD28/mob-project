@@ -1,0 +1,29 @@
+.Navigation {
+    @apply top-3 inline-block p-16;
+}
+
+.Appname {
+    @apply inline-block no-underline font-bold text-lg text-header;
+    @layer font-header;
+}
+
+.Logo {
+    @apply inline-block h-20 w-20;
+}
+
+.Button {
+    @apply text-center rounded-xl border-2 border-solid h-20;
+    @layer font-button;
+}
+
+.Button Login {
+
+}
+
+.Button Signup {
+
+}
+
+.HeaderButtons {
+    @apply right-16 inline-block absolute;
+}

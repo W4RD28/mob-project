@@ -1,4 +1,4 @@
-import '../Styles/Navbar.css'
+import '../Styles/Header.css'
 import logo from '../logo.svg'
 import { Link } from 'react-router-dom'
 
@@ -10,6 +10,14 @@ const Navbar = () => {
                 <p className='Appname'>MOB</p>
             </Link>
             
+            <div className='HeaderButtons'>
+                <Link to="Login">
+                    <button className="Button Login">Login</button>
+                </Link>
+                <Link to="Signup">
+                    <button className="Button Signup">Signup</button>
+                </Link>
+            </div>
         </div>
         
      );

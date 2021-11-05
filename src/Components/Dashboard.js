@@ -1,9 +1,9 @@
 import '../Styles/Dashboard.css'
-import Navbar from './Navbar'
+import Header from './Header'
 
 const Dashboard = () => {
     return ( 
-        <Navbar />
+        <Header />
      );
 }
  
