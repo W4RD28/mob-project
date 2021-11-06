@@ -1,0 +1,27 @@
+.Profile {
+    @apply fixed top-0 left-0 min-h-screen w-16 m-0 flex flex-col bg-brown;
+}
+
+.Userimg {
+    @apply rounded-full m-1;
+}
+
+.Icons {
+    @apply w-9 h-9 self-center absolute bottom-16 space-y-3 text-white;
+}
+
+.MyWorkspaces {
+    @apply fixed top-0 left-16 min-h-screen w-64 m-0 flex flex-col bg-light-brown font-body;
+}
+
+.WorkspaceLink {
+    @apply mx-1 my-2 align-middle;
+}
+
+.Groupimg {
+    @apply rounded-full m-1 h-14 w-14 float-left;
+}
+
+.Groupname {
+    @apply align-middle m-auto pl-16 w-52 text-left font-body font-bold text-body;
+}

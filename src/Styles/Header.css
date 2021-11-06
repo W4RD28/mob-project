@@ -3,8 +3,7 @@
 }
 
 .Appname {
-    @apply inline-block no-underline font-bold text-lg text-header;
-    @layer font-header;
+    @apply inline-block no-underline text-lg text-header font-header font-bold;
 }
 
 .Logo {

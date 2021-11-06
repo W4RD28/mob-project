@@ -1,7 +1,9 @@
-const Home = () => {
+import SideBar from './SideBar';
+
+const Workspaces = () => {
     return ( 
-        <header>Ini Workspaces</header>
+        <SideBar />
      );
 }
  
-export default Home;
+export default Workspaces;
