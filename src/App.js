@@ -1,8 +1,8 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp';
 import Dashboard from './Components/Dashboard';
 import Workspaces from './Components/Workspaces';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './Styles/App.css';
 
 function App() {
