@@ -21,6 +21,9 @@ module.exports = {
       'button': ["Roboto", "ui-sans-serif", "Open-Sans"],
       'body': ["Roboto", "ui-sans-serif", "Open-Sans"]
     },
+    container: {
+      center: true
+    },
     extend: {},
   },
   variants: {
