@@ -22,7 +22,7 @@ const LoginForm = ({onSubmit}) => {
                 <FormField ref={emailRef} label="Email:" type="text" />
                 <FormField ref={passwordRef} label="Password:" type="password" />
                 <div>
-                    <button type="submit">Login</button>
+                <button type="submit">Login</button>
                 </div>
                 <a href="signup" className="float-left">Create Account</a>
                 <a href="signup" className="float-right">Forgot Password</a>

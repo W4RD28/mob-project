@@ -11,10 +11,10 @@ const Navbar = () => {
             </Link>
             
             <div className='HeaderButtons'>
-                <Link to="Login">
+                <Link to="/login">
                     <button className="Button Login">Login</button>
                 </Link>
-                <Link to="Signup">
+                <Link to="/signup">
                     <button className="Button Signup">Signup</button>
                 </Link>
             </div>
