@@ -9,12 +9,13 @@ module.exports = {
       'brown': '#a35709',
       'light-brown': '#efd299',
       'black': '#1b1a17',
-      'white': '#ffffff'
+      'white': '#ffffff',
     },
     textColor: {
       'header': '#a35709',
       'body': '#773e35',
-      'white': '#ffffff'
+      'white': '#ffffff',
+      'blue': '#0075FF'
     },
     fontFamily: {
       'header': ["Montserrat", "Roboto", "ui-sans-serif", "Open-Sans"],
