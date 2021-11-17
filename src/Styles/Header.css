@@ -1,28 +1,38 @@
 .Navigation {
-    @apply top-3 inline-block p-16;
+    @apply top-3 inline-block p-5;
 }
 
 .Appname {
     @apply inline-block no-underline text-lg text-header font-header font-bold;
+    padding-left: 10px;
 }
 
 .Logo {
     @apply inline-block h-20 w-20;
+    padding-left: 40px;
 }
 
 .Button {
-    @apply text-center rounded-xl border-2 border-solid h-20;
+    @apply text-center rounded-xl border-2 border-solid h-7 w-20;
     @layer font-button;
+    margin-right: 15px;
+    color: #a35709;
+}
+
+.Button:hover {
+    background-color: #a35709;
+    color: white;
+    border-color: #a35709;
 }
 
 .Button Login {
-
+    padding-left: 20px;
 }
 
-.Button Signup {
-
-}
+.Button Signup {}
 
 .HeaderButtons {
-    @apply right-16 inline-block absolute;
+    @apply right-10 inline-block absolute;
+    padding-top: 20px;
+    padding-right: 20px;
 }

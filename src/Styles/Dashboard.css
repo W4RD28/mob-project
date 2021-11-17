@@ -1,0 +1,22 @@
+.tagline {
+    @apply text-body font-header;
+    padding-top: 80px;
+    text-align: center;
+    font-family: 'bebas-neue';
+    font-weight: bold;
+}
+
+.tagline h1 {
+    font-size: 55px;
+    line-height: 2;
+}
+
+.tagline p {
+    font-size: 13.5px;
+    line-height: 1;
+}
+
+.dashboard {
+    position: absolute;
+    bottom: 1px;
+}
