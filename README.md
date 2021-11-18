@@ -8,15 +8,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="src/logo.svg" alt="Logo" width="150" height="150">
+    <img src="src/assets/logo.svg" alt="Logo" width="150" height="150">
   </a>
 
   <h2 align=center>Mob</h2>
 
   <p align="center">
     Sebuah aplikasi yang dapat membantu mengelola kegiatan sehari-hari kamu yang sibuk dengan organisasi dan kepanitiaan. Di aplikasi ini kamu dan teman-teman seperbabuanmu bisa menjadwalkan rapat, membentuk timeline, dan memberi kabar via fitur chat kami.
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
   </p>
 </div>
 

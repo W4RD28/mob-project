@@ -1,5 +1,5 @@
 import '../Styles/Dashboard.css'
-import dashboard from '../dashboard.svg'
+import dashboard from '../assets/dashboard.svg'
 import Header from './Header'
 
 const Dashboard = () => {
@@ -12,7 +12,7 @@ const Dashboard = () => {
             <p>A PLACE WHERE YOU CAN WORK AND ALSO ENJOY!</p>
         </div>
         <div className="dashboard">
-            <img src={dashboard}/>
+            <img src={dashboard} alt=""/>
         </div>
         </>
      );

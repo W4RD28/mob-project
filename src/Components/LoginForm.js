@@ -1,7 +1,7 @@
 import react from 'react';
 import FormField from './FormField';
 import '../Styles/LoginForm.css';
-import logo from '../logo.svg';
+import logo from '../assets/logo.svg';
 import PassField from './PassField';
 require('typeface-montserrat')
 

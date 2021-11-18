@@ -2,7 +2,7 @@ import react from 'react';
 import FormField from './FormField';
 import PassField from './PassField';
 import '../Styles/SignUpForm.css';
-import logo from '../logo.svg';
+import logo from '../assets/logo.svg';
 
 const SignUpForm = ({ onSubmit }) => {
     const emailRef = react.useRef();
