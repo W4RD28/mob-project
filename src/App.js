@@ -10,18 +10,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/workspaces">
-            <Workspaces />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <SignUp />
-          </Route>
-          <Route exact path="/">
-            <Dashboard />
-          </Route>
+          <Route path="/workspaces" component={Workspaces} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={SignUp} />
+          <Route exact path="/" component={Dashboard} />
         </Switch>
       </Router>
     </div>

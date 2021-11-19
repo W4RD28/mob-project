@@ -1,9 +1,6 @@
 .tagline {
-    @apply text-body font-header;
-    padding-top: 80px;
-    text-align: center;
+    @apply text-body font-header pt-20 text-center font-bold;
     font-family: 'bebas-neue';
-    font-weight: bold;
 }
 
 .tagline h1 {

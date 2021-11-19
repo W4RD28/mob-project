@@ -3,36 +3,29 @@
 }
 
 .Appname {
-    @apply inline-block no-underline text-lg text-header font-header font-bold;
-    padding-left: 10px;
+    @apply inline-block no-underline text-lg text-header font-header font-bold pl-2;
 }
 
 .Logo {
-    @apply inline-block h-20 w-20;
-    padding-left: 40px;
+    @apply inline-block h-20 w-20 pl-10;
 }
 
 .Button {
-    @apply text-center rounded-xl border-2 border-solid h-7 w-20;
-    @layer font-button;
-    margin-right: 15px;
+    @apply text-center rounded-xl border-2 border-solid h-7 w-20 mr-4;
+    @layer font-button text-brown;
     color: #a35709;
 }
 
 .Button:hover {
-    background-color: #a35709;
-    color: white;
-    border-color: #a35709;
+    @apply text-white bg-brown border-brown;
 }
 
 .Button Login {
-    padding-left: 20px;
+    @apply pl-5;
 }
 
 .Button Signup {}
 
 .HeaderButtons {
-    @apply right-10 inline-block absolute;
-    padding-top: 20px;
-    padding-right: 20px;
+    @apply right-10 inline-block absolute pt-5 pr-5;
 }
