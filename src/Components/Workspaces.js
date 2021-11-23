@@ -1,6 +1,7 @@
 import SideBar from './SideBar';
 import { doc, getDoc, collection, getDocs} from "firebase/firestore";
 import { firestore, auth } from "../Firebase";
+import { Redirect } from 'react-router-dom';
 
 function getUserID(){
     return auth.currentUser.uid
@@ -67,7 +68,14 @@ async function getMembers() {
 const Workspaces = () => {
     
     return (
+        <div>
         <SideBar />
+
+
+        {/* Buat redirect kalo belom login */}
+        { auth.currentUser ? null : <Redirect to="/login" /> }
+        </div>
+        
      );
 }
  
