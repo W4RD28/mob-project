@@ -2,6 +2,7 @@ import SideBar from './SideBar';
 import { doc, getDoc, collection, getDocs} from "firebase/firestore";
 import { firestore, auth } from "../Firebase";
 import { Redirect } from 'react-router-dom';
+import { useState } from 'react';
 
 function getUserID(){
     return auth.currentUser.uid
@@ -15,6 +16,8 @@ async function isMember() {
             workspaceMember.forEach((wsm) => {
                 if(wsm.data().userid == getUserID()){
                     console.log(wsm.data().username, " is a member of ", ws.data().workspaceName);
+                    console.log(ws.id)
+                    return ws.id;
                 }
             });
         }
@@ -29,35 +32,34 @@ async function getWorkspaces() {
     });
 }
 async function getTasks() {
-    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "tasks"))
+    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "/tasks"))
     querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
     console.log(doc.id, " => ", doc.data());
     });
 }
 async function getSchedules() {
-    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "schedules"))
+    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "/schedules"))
     querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
     console.log(doc.id, " => ", doc.data());
     });
 }
 async function getTimeline() {
-    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "timeline"))
+    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "/timeline"))
     querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
     console.log(doc.id, " => ", doc.data());
     });
 }
-async function getMessage() {
-    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "messages"))
-    querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
+async function getMessages(workspace) {
+    const messageSnapshot = await getDocs(collection(firestore,"workspaces/" + workspace + "/messages"));
+    messageSnapshot.forEach((ms) => {
+        console.log(ms.data().text);
     });
 }
 async function getMembers() {
-    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "members"))
+    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "/members"))
     querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
     console.log(doc.id, " => ", doc.data());
@@ -65,7 +67,9 @@ async function getMembers() {
 }
 
 const Workspaces = () => {
-    isMember();
+    const [userWorkspace, setWorkspace] = useState(isMember())
+    getMessages(userWorkspace);
+    
     return (
         <div>
         <SideBar />
