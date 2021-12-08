@@ -10,6 +10,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          {/* <Route path="/workspaces/:id/timeline" component={Timeline} /> */}
+          {/* <Route path="/workspaces/:id/tasks" component={Tasks} /> */}
+          {/* <Route path="/workspaces/:id/schedule" component={Schedule} /> */}
+          {/* <Route path="/workspaces/:id" component={Chat} /> */}
           <Route path="/workspaces" component={Workspaces} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />

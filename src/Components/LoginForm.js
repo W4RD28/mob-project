@@ -22,7 +22,7 @@ const LoginForm = ({ onSubmit }) => {
                 <img src={logo} alt="" className="Logo ml-44" />
                 <h3 style={{ color: 'brown' }} className="font-bold font-header text-center text-xl text-brown">MOB</h3>
                 <form onSubmit={handleSubmit} className="flex flex-col" >
-                    <FormField ref={emailRef} type="text" />
+                    <FormField ref={emailRef} placeholder="Email Address" type="text" />
                     <PassField ref={passwordRef} type="password" />
                     <div className="mb-3.5">
                         <button type="submit" className="p-3 bg-brown w-full text-xl text-white rounded">Log In</button>
