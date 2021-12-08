@@ -10,6 +10,7 @@ module.exports = {
       'light-brown': '#efd299',
       'black': '#1b1a17',
       'white': '#ffffff',
+      'white-brown': '#fffaef'
     },
     textColor: {
       'header': '#a35709',
@@ -25,7 +26,14 @@ module.exports = {
     container: {
       center: true
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+        '100': '35rem'
+      }
+    },
   },
   variants: {
     extend: {},

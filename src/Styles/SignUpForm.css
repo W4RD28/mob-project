@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .SignUpForm {
-    @apply shadow-2xl
+    @apply shadow-2xl bg-white max-w-lg mx-auto p-8 rounded-lg pb-20;
 }
