@@ -1,13 +1,27 @@
 import '../Styles/SideBar.css'
 import { BellIcon, CogIcon } from '@heroicons/react/outline'
+import { doc, getDoc, collection, getDocs} from "firebase/firestore";
+import { getDatabase, ref, child, get } from "firebase/database";
+import { firestore, auth } from "../Firebase";
+import { useState } from 'react';
+
+async function getPhotoURL() {
+    const memberSnap = await getDocs(collection(firestore,"users"));
+    memberSnap.forEach((doc) => {
+        if(doc.id == auth.currentUser.uid)
+            return doc.data().photoURL;
+    });
+}
 
 const SideBar = () => {
+    const [userPhoto, setPhoto] = useState(getPhotoURL());
+    
     return (
         <div className="inline-block">
             <nav className="Profile">
                 {/* cari gambar yang kotak nanti lonjong kalo gak bisa */}
                 <a href="#" className="w-12">
-                    <img src="https://lh3.googleusercontent.com/a-/AOh14GiXK3mJXWaKrJhb6xBuWP_LjIv0hDWcKGaDVhdDLQ=s288-p-rw-no"
+                    <img src={ userPhoto }
                         alt="Placeholder User" className="Userimg" />
                 </a>
 

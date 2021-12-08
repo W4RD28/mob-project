@@ -6,20 +6,19 @@ import { Redirect } from 'react-router-dom';
 function getUserID(){
     return auth.currentUser.uid
 }
-async function getUsers() {
-    // const docRef = doc(firestore, "users", "P51rxv9IvvdQjvvniBUawrUzPZm2");
-    // const docSnap = await getDoc(docRef);
-
-    // if (docSnap.exists()) {
-    // console.log("Document data:", docSnap.data());
-    // } else {
-    // // doc.data() will be undefined in this case
-    // console.log("No such document!");
-    // }
-    const querySnapshot = await getDocs(collection(firestore, "users"));
-    querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
+async function isMember() {
+    const worspaceSnapshot = await getDocs(collection(firestore, "workspaces"));
+    worspaceSnapshot.forEach((ws) => {
+        // doc.data() is never undefined for query doc snapshots
+        const memberSnapshot = async function() {
+            const workspaceMember = await getDocs(collection(firestore,"workspaces/" + ws.id + "/members"));
+            workspaceMember.forEach((wsm) => {
+                if(wsm.data().userid == getUserID()){
+                    console.log(wsm.data().username, " is a member of ", ws.data().workspaceName);
+                }
+            });
+        }
+        memberSnapshot();
     });
 }
 async function getWorkspaces() {
@@ -66,7 +65,7 @@ async function getMembers() {
 }
 
 const Workspaces = () => {
-    
+    isMember();
     return (
         <div>
         <SideBar />
