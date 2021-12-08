@@ -15,7 +15,7 @@
 }
 
 .WorkspaceLink {
-    @apply mx-1 my-2 align-middle;
+    @apply mx-1 my-2 align-middle flex flex-nowrap content-center;
 }
 
 .Groupimg {
@@ -24,4 +24,33 @@
 
 .Groupname {
     @apply align-middle m-auto pl-2 w-52 text-left font-body font-bold text-body;
+}
+
+.notepad{
+    @apply fixed top-0 left-80 min-h-screen w-100 m-0 flex flex-col font-body;
+}
+
+.workspacebtn{
+    @apply focus:bg-brown focus:bg-opacity-50 rounded-xl
+}
+
+.tab {
+    overflow: hidden;
+}
+.tab-content {
+    max-height: 0;
+    transition: all 0.5s;
+}
+input:checked + .tab-label .test {
+        background-color: #000;
+}
+input:checked + .tab-label .test svg {
+        transform: rotate(180deg);
+        stroke: #fff;
+}
+input:checked + .tab-label::after {
+    transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+    max-height: 100vh;
 }

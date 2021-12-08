@@ -22,7 +22,7 @@ const SignUpForm = ({ onSubmit }) => {
     };
     return (
         <body className="body-bg min-h-screen pt-12 md:pt-20 md:px-0 align-middle">
-            <div className="SignUpForm bg-white max-w-lg mx-auto p-8 rounded-lg pb-20">
+            <div className="SignUpForm">
                 <img src={logo} alt="" className="Logo ml-44" />
                 <h3 style={{ color: 'brown' }} className="font-bold font-header text-center text-xl text-brown">MOB</h3>
                 <form onSubmit={handleSubmit} className="flex flex-col">

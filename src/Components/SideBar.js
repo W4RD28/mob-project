@@ -35,31 +35,38 @@ const SideBar = () => {
                 </div>
             </nav>
             <nav className="MyWorkspaces">
-                <button href="#" className="focus:bg-brown focus:bg-opacity-50 rounded-xl">
-                    <div className="WorkspaceLink flex flex-nowrap content-center">
+                <button href="#" className="workspacebtn">
+                    <div className="WorkspaceLink">
                         <img src="https://lh3.googleusercontent.com/a-/AOh14GiXK3mJXWaKrJhb6xBuWP_LjIv0hDWcKGaDVhdDLQ=s288-p-rw-no"
                             alt="Placeholder Group" className="Groupimg" />
                         <p className="Groupname">Persatuan Komodo</p>
                     </div>
                 </button>
-                <button className="focus:bg-brown focus:bg-opacity-50 rounded-xl">
-                    <div className="WorkspaceLink flex flex-nowrap content-center">
+                <button className="workspacebtn">
+                    <div className="WorkspaceLink">
                         <img src="https://lh3.googleusercontent.com/a-/AOh14GiXK3mJXWaKrJhb6xBuWP_LjIv0hDWcKGaDVhdDLQ=s288-p-rw-no"
                             alt="Placeholder Group" className="Groupimg" />
                         <p className="Groupname">Komodo Dragon Forum Group</p>
                     </div>
                 </button>
-                <button className="focus:bg-brown focus:bg-opacity-50 rounded-xl">
-                    <div className="WorkspaceLink flex flex-nowrap content-center">
+                <button className="workspacebtn">
+                    <div className="WorkspaceLink">
                         <img src="https://lh3.googleusercontent.com/a-/AOh14GiXK3mJXWaKrJhb6xBuWP_LjIv0hDWcKGaDVhdDLQ=s288-p-rw-no"
                             alt="Placeholder Group" className="Groupimg" />
                         <p className="Groupname">Keluarga Komodo</p>
                     </div>
                 </button>
+                <button className="workspacebtn">
+                    <div className="WorkspaceLink">
+                        <img src="https://media.istockphoto.com/vectors/black-plus-sign-positive-symbol-vector-id688550958?k=20&m=688550958&s=170667a&w=0&h=vwmBL25oWU3A26BASebi4wENUZ23pnYz9QKnBiw4EvE="
+                            alt="Placeholder Group" className="Groupimg" />
+                        <p className="Groupname">Add Workspace</p>
+                    </div>
+                </button>
                 <div className></div>
             </nav>
-        </div>
 
+        </div>
     );
 }
 
