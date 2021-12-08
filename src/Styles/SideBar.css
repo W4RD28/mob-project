@@ -23,5 +23,5 @@
 }
 
 .Groupname {
-    @apply align-middle m-auto pl-16 w-52 text-left font-body font-bold text-body;
+    @apply align-middle m-auto pl-2 w-52 text-left font-body font-bold text-body;
 }
