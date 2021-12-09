@@ -52,18 +52,11 @@ async function getTimeline() {
         console.log(doc.id, " => ", doc.data());
     });
 }
-<<<<<<< HEAD
-async function getMessages(workspace) {
-    const messageSnapshot = await getDocs(collection(firestore,"workspaces/" + workspace + "/messages"));
-    messageSnapshot.forEach((ms) => {
-        console.log(ms.data().text);
-=======
-async function getMessage() {
-    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "messages"))
+async function getMessages() {
+    const querySnapshot = await getDocs(collection(firestore, "workspaces/" + getUserID() + "/messages"))
     querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         console.log(doc.id, " => ", doc.data());
->>>>>>> 17deabc5955fae32bf7b13947a5997712d49ce6d
     });
 }
 async function getMembers() {
